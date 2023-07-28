@@ -1,12 +1,12 @@
 #include "printf.h"
 
 /**
- * _printhex - prints hexadecimal
+ * printhex - prints hexadecimal
  * @format: format to print hexa
  * @args: lists that contain the hexa
  * Return: Number
  */
-int _printhex(char *format, va_list args)
+int printhex(char *format, va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	unsigned int num2;
