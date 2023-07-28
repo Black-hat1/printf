@@ -1,11 +1,11 @@
-#include "my_printf.h"
+#include "printf.h"
 
 /**
- * _inputs - prints a string
+ * _puts - prints a string
  * @str: input string
  * Return: count of string
  */
-int _inputs(char *str);
+int _puts(char *str)
 {
 	int my_int = 0;
 
