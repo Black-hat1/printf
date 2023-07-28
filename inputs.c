@@ -2,17 +2,17 @@
 
 /**
  * _puts - prints a string
- * @str: input string
+ * @string: input string
  * Return: count of string
  */
-int _puts(char *str)
+int _puts(char *string)
 {
 	int my_int = 0;
 
-	while (*str)
+	while (*string)
 	{
-		_putchar(*str);
-		str++;
+		_putchar(*string);
+		string++;
 		my_int++;
 	}
 	return (my_int);
