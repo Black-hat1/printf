@@ -19,8 +19,8 @@ typedef struct structprint
 } structype;
 
 int _printf(const char *format, ...);
-int _inputs(char *str);
-int putc(char *format, va_list);
+int _puts(char *str);
+int printc(char *format, va_list);
 int print_string(char *format, va_list);
 int (*driver(char *format))(char *format, va_list);
 int print_int(char *format, va_list args);
