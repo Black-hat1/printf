@@ -1,5 +1,4 @@
 #include "printf.h"
-#include <stdarg.h>
 
 /**
  * driver - selector for the function
