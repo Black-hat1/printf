@@ -1,4 +1,5 @@
 #include "my_printf.h"
+#include <stdarg.h>
 
 /**
  * driver - selector for the function
@@ -8,28 +9,27 @@
  * Return: pointer
  * structype selector - struct
  */
-
-int (*driver(char *format))(char *format, va_list);
+int (*driver(char *format))(char *format, va_list)
 {
-	int a;
+	int i;
 
 	structype selector[] = {
-		{"%c", putc},
-		{"%s", print_string},
-		{"%d", print_int},
-		{"%i", print_int},
-		{"%%", printpercent},
-		{"%x", _printhex},
-		{"%X", print_Hex},
-		{"%o", print_octa},
-		{NULL, NULL}
+	{"%c", putc},
+	{"%s", print_string},
+	{"%d", print_int},
+	{"%i", print_int},
+	{"%%", printpercent},
+	{"%x", _printhex},
+	{"%X", print_Hex},
+	{"%o", print_octa},
+	{NULL, NULL}
 	};
 
 	if (format[1] == ' ' || format[1] == '\0')
 		return (NULL);
-	for (a = 0; selector[a].q; a++)
+	for (i = 0; selector[i].q; i++)
 	{
-		if (format[1] == selector[a].q[1])
+		if (format[1] == selector[i].q[1])
 			return (selector[i].u);
 	}
 	return (NULL);
